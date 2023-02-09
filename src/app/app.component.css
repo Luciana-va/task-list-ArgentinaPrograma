@@ -1,0 +1,20 @@
+.fondo{
+    background-color: #baf3ff;
+
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedor{
+    height: auto;
+    width: 400px;
+
+    background-color: aquamarine;
+    border: 7px solid black;
+    border-radius: 10%;
+
+   
+    }

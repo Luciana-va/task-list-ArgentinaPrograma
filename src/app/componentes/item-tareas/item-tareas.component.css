@@ -1,0 +1,25 @@
+.tarjTareas{
+    background-color: #84b9cf92;
+    margin: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.tarjTareas.reminder{
+    border-left: 5px solid green;
+}
+
+.tarjTareas:hover{
+    background-color: #63b2d4dd;
+}
+
+.tarjTareas h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.incompleto i{
+    color:red
+}
