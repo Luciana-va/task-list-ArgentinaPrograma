@@ -20,6 +20,10 @@
     justify-content: space-between;
 }
 
-.incompleto i{
+.incompleto {
     color:red
+}
+
+.completo {
+    border-left: 5px solid green;
 }

@@ -1,11 +1,15 @@
-<div class="tarjTareas">
-    <h3
-    [ngClass]="{completo:true, incompleto: mecompletaron(task.recordatorio)}">
+<div class="tarjTareas"
+(click)="onToggle(task)"
+>
+    <h3>
         {{task.text}}
-        {{task.id}}
+        
+
         <i 
+        [ngClass]="{incompleto: mecompletaron(task.recordatorio)}"
         (click)="onDelate(task)"
-        class="bi bi-x-octagon-fill"></i>
+        class="bi bi-x-octagon-fill"
+        ></i>
 
     </h3>
     <p>{{task.day}}</p>

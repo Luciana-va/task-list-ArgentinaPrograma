@@ -10,6 +10,7 @@ import { TaskService } from 'src/app/service/task.service';
 })
 export class TareasComponent implements OnInit {
   tasks: Task[] = [];
+  
 
   constructor(
     private taskService: TaskService
@@ -28,11 +29,22 @@ export class TareasComponent implements OnInit {
 
   }
 
+  toggleReminder(task: Task){
+    task.recordatorio = !task.recordatorio;
+    this.taskService.updateTaskReminder(task).subscribe();
+    console.log(task);
+  }
+
+  agregarTarea(task:Task){
+    console.log(task);
+    this.taskService.agregarTarea(task).subscribe((task)=>
+    (this.tasks.push(task)
+    ));
+  }
+
+ 
+
+
   
-  /* deleteTask(task:Task){
-    this.taskService.deleteTask(task)
-    .subscribe(() =>(
-      this.tasks = this.tasks.filter((t)=> t.id !== task.id)
-    ))
-  } */
+
 }

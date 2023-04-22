@@ -2,9 +2,14 @@
     <h1>{{title}}</h1>  
     <app-boton 
     id="btn1" 
-    color="green" text="añadir"
+    color= "{{mostrarFormulario? 'red':'green'}}"
+    
+    text ="{{mostrarFormulario? 'Cerrar':'Añadir'}}"
+    
     (btnClick)="toggleAddTask()"
+    
     ></app-boton>
+    <!--    dentro de la etiqueta app boton-->
 
 
 </header>

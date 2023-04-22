@@ -13,6 +13,7 @@ export class ItemTareasComponent implements OnInit {
   @Input() task: Task = TASK[0]
   @Input() recordatorio:boolean = true||false;
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
 
   constructor(){}
 
@@ -26,6 +27,12 @@ export class ItemTareasComponent implements OnInit {
   onDelate(task:Task){
     console.log(task);
     this.onDeleteTask.emit(task);
+  }
+
+  onToggle(task:Task){
+    console.log ("oprimio la tarjeta");
+    this.onToggleReminder.emit(task);
+    
   }
 
 }

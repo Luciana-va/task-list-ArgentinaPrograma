@@ -1,12 +1,4 @@
-.fondo{
-    background-color: #baf3ff;
 
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
 
 .contenedor{
     height: auto;
